@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "hugofolloni",
+      "password": "folloni0710",
+      "notes": [
+        {
+            "message": "Eu sou o Hugo", 
+            "id": 1
+        }
+    ]
+
+    },
+    {
+      "username": "lnicolla",
+      "password": "istluluhaa",
+      "id": 2,
+      "notes": [
+        {
+            "message": "Eu sou a Luiza", 
+            "id": 1
+        }
+    ]
+    }
+  ]
+}
