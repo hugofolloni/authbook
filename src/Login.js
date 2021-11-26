@@ -18,10 +18,13 @@ const Login = () => {
                 }
             }
             if(userExists === true){
-                console.log(`Logado! Usuário ${username} de id ${userId} foi autenticado!`);
+                window.alert(`Logado! Usuário ${username} foi autenticado!`);
+                localStorage.setItem("userId", userId);
+                window.location.href = '/notes';
             }
             else{
-                console.log("Usuário ou senha inválidos!");
+                window.alert("Usuário ou senha inválidos!");
+                window.location.reload()
             }
         })
     }
@@ -32,6 +35,7 @@ const Login = () => {
             <input type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value) }/>
             <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value) }/>
             <button onClick={ handleAuth }>Login</button>
+            <a href='/create'>Create new user</a>
         </div>
      );
 }

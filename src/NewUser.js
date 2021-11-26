@@ -6,15 +6,31 @@ const NewUser = () => {
     const [password, setPassword] = useState("")
 
     const handleCreate = () => {
-        fetch('http://localhost:8000/users', { 
-            method: 'POST', 
-            headers: {  'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                username: username,
-                password: password
-                })
+        fetch('http://localhost:8000/users')
+        .then(res => res.json())
+        .then(data => {
+            var userExists = false;
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].username === username) {
+                    userExists = true;
+                }
+            }
+            if(userExists === true){
+                alert("User already exists");
+            }
+            else{
+                fetch('http://localhost:8000/users', { 
+                    method: 'POST', 
+                    headers: {  'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        username: username,
+                        password: password
+                        })
+                    })
+                    .then(() => window.alert(`Novo usuário cadastrado: ${username}`))
+                    .then(() => window.location.href = '/login')
+                }
             })
-            .then(() => window.location.href = '/')
     }
 
     return ( 
