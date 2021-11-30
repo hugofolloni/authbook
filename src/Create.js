@@ -21,7 +21,7 @@ const Create = (props) => {
                 oldNotes.push({note: note, date: date});
                 newNotes = oldNotes;
             } else {
-                newNotes = [{note: note, date: date}]
+                newNotes = [{note: note, date: date}];
             }
             fetch(url, {    
                 method: 'PUT',
