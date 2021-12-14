@@ -80,7 +80,7 @@ const Text = (props) => {
 
     return ( 
         <div className="texts-div">
-            { editing && <div className='edit-div'>
+            { editing && <div className='create-div'>
                 <textarea value={editText} onChange={(e) => setEditText(e.target.value)}/>
                 <button onClick={ () => setEditing(false) }>Cancel</button>
                 <button onClick={ () => handleUpdate() }>Update</button>

@@ -34,11 +34,20 @@ const NewUser = () => {
     }
 
     return ( 
-        <div className='new-user-div'>
+        <div className='login-div'>
             <h1>New User</h1>
-            <input type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value) }/>
-            <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value) } />
-            <button onClick={ handleCreate }>Create</button>
+            <div className="container">
+                <a className='arrowDiv' href="/login"><i class="arrow left"></i></a>
+                <div className="usernameDiv">
+                    <h3>Username</h3>
+                    <input type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value) }/>
+                </div>
+                <div className="passwordDiv">
+                    <h3>Password</h3>
+                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value) } />
+                </div>
+                <button onClick={ handleCreate }>Create</button>
+            </div>
         </div>
      );
 }

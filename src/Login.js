@@ -32,10 +32,18 @@ const Login = () => {
     return ( 
         <div className='login-div'>
             <h1>Login</h1>
-            <input type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value) }/>
-            <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value) }/>
-            <button onClick={ handleAuth }>Login</button>
-            <a href='/create'>Create new user</a>
+            <div className="container">
+                <div className="usernameDiv">
+                    <h3>Username</h3>
+                    <input type='text' placeholder='Username' onChange={(e) => setUsername(e.target.value) }/>
+                </div>
+                <div className="passwordDiv">
+                    <h3>Password</h3>
+                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value) }/>
+                </div>
+                <button onClick={ handleAuth }>Login</button>
+                <a className='create' href='/create'>New user</a>
+            </div>
         </div>
      );
 }

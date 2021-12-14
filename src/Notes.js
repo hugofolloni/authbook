@@ -32,10 +32,12 @@ const Notes = () => {
     
 
     return ( 
-        <div className="notes">
-            <h1>Notes</h1>
-            <div className='logout-div'>
-                <button className='logout-button' onClick={ handleLogout }>Logout</button>
+        <div className="notes-div">
+            <div className="header">
+                <h1>Notes</h1>
+                <div className='logout-div'>
+                    <button className='logout-button' onClick={ handleLogout }>Logout</button>
+                </div>
             </div>
             <div className='create'>
                 <Create userId={userId}/>
