@@ -46,8 +46,10 @@ const Create = (props) => {
     return ( 
         <div className='create-div'>
             <h3>Create Note</h3>
-            <textarea value={note} onChange ={ (e) => setNote(e.target.value) }/>
-            <button onClick={handleSubmit}>Create</button>
+            <div className="inputs">
+                <textarea value={note} onChange ={ (e) => setNote(e.target.value) }/>
+                <button onClick={handleSubmit}>Create</button>
+            </div>
         </div>
      );
 }

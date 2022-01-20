@@ -80,17 +80,25 @@ const Text = (props) => {
 
     return ( 
         <div className="texts-div">
-            { editing && <div className='create-div'>
-                <textarea value={editText} onChange={(e) => setEditText(e.target.value)}/>
-                <button onClick={ () => setEditing(false) }>Cancel</button>
-                <button onClick={ () => handleUpdate() }>Update</button>
+            { editing && <div className='create-div' id='editing-create-div'>
+                <h3>Editing...</h3>
+                <div className="inputs" id="editing-inputs">
+                    <textarea value={editText} onChange={(e) => setEditText(e.target.value)}/>
+                    <div className="buttons">
+                        <button onClick={ () => setEditing(false) }>Cancel</button>
+                        <button onClick={ () => handleUpdate() }>Update</button>
+                    </div>
+                </div>
             </div> 
             }
             {texts.map((texts, index) => (
                 <div className="singular-text">
-                    <p>{texts.note}   -   {texts.date}</p>
-                    <button onClick={() => handleEdit(index, texts.note)}>Edit</button>
-                    <button onClick={() => handleDelete(index) }>Delete</button>
+                    <h3>{texts.note}</h3>
+                    <div className="more-infos">
+                        <p>{texts.date}</p>
+                        <button onClick={() => handleEdit(index, texts.note)}>Edit</button>
+                        <button onClick={() => handleDelete(index) }>Delete</button>
+                    </div>
                 </div>
             ))
         }

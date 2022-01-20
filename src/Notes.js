@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styled from 'styled-components'
 import Text from "./Text";
 import Create from "./Create";
 
@@ -17,6 +18,13 @@ const Notes = () => {
         window.location.href = "/login";
     }
 
+    const [displayCreateNote, setDisplayCreateNote] = useState('none')
+    const [boxText, setBoxText] = useState('+')
+
+    const CreateDiv = styled.div`
+        display: ${displayCreateNote};
+    `
+
     useEffect(() => {
         fetch(url)
         .then(res => res.json())
@@ -30,6 +38,15 @@ const Notes = () => {
         })
     }, [url, userId]);
     
+    const changeCreate = () => {
+        if(displayCreateNote === 'none'){
+            setDisplayCreateNote('flex')
+            setBoxText('-')
+        } else {
+            setDisplayCreateNote('none')
+            setBoxText('+')
+        }
+    }
 
     return ( 
         <div className="notes-div">
@@ -39,9 +56,10 @@ const Notes = () => {
                     <button className='logout-button' onClick={ handleLogout }>Logout</button>
                 </div>
             </div>
-            <div className='create'>
+            <div className='box' onClick={ changeCreate }>{boxText}</div>
+            <CreateDiv>
                 <Create userId={userId}/>
-            </div>
+            </CreateDiv>
             <div className="notes">
                 <h4>Notes from { username }</h4>
                 {texts && <Text texts={texts} />}
