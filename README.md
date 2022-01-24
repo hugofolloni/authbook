@@ -12,4 +12,5 @@ On the first page, the user can see the login form. If the user exists, he can l
 - JSON-server
 
 ## 🎨 UI
-
+![image](https://user-images.githubusercontent.com/82226141/150837489-aa5d4350-c8d5-4c4f-ac56-5472c09fcd95.png)
+![image](https://user-images.githubusercontent.com/82226141/150837594-80763401-ead3-457a-b19f-4264b2d35b31.png)
