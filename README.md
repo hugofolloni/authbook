@@ -1,8 +1,15 @@
-# auth-notebook
+# authbook
 
-## I had an idea
+## 🗒️ About this project
+A notebook with authentication. My first project with accounts and different results for different users. This project is simply a place where you can store all your thoughts and ideas.
 
-- [x] Criar app com autenticação → Um bloco de notas. Ele funcionará assim: o usuário na primeira página será direcionado ao login. Após login autenticado (para o login ser autenticado, deve-se percorrer toda a array buscando o nome de usuário, caso ache, terá que ser colocada achada uma senha, que se for encontrada também, poderá ter acesso ao bloco de notas. Lá, o usuário criará suas notas. Diferentes usuários enxergarão diferentes notas pois estarão olhando em partes diferentes na array da API. (Primeiro json-server e dps fazer com API RESTful - tenho q aprender)
-- [ ]  Criar UI para auth-notebook
-- [ ]  Criar UPDATE/DELETE para auth-notebook 
-- [ ]  Criar API em express (ou python) → parar de usar json-server
+## 🧔 User Story
+On the first page, the user can see the login form. If the user exists, he can login and see his notes. If the user does not exist, he can create an account. To login, the server searches on the database and check if the user exists and the password is correct. The user can create, edit and delete notes, and the server stores the data in the database. Of course, each user will see only his data, and it was very challenging for me to create this, because it was my first time working with this.
+
+## 💻 Technologies
+- React
+- React-Router
+- JSON-server
+
+## 🎨 UI
+

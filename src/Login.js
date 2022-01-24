@@ -28,6 +28,12 @@ const Login = () => {
             }
         })
     }
+    
+    const handleEnter = (event) => {
+        if(event.key === 'Enter'){
+            handleAuth();
+        }
+    }
 
     return ( 
         <div className='login-div'>
@@ -39,7 +45,7 @@ const Login = () => {
                 </div>
                 <div className="passwordDiv">
                     <h3>Password</h3>
-                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value) }/>
+                    <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value) } onKeyPress={ handleEnter }/>
                 </div>
                 <button onClick={ handleAuth }>Login</button>
                 <a className='create' href='/create'>New user</a>

@@ -187,6 +187,7 @@ h1 {
   font-size: 60px;
   color: white;
   margin-left: -60%;
+  cursor: pointer;
 }
 
 .create-div {
@@ -276,6 +277,8 @@ h1 {
   width: 50vw;
   padding: 15px;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .singular-text h3 {

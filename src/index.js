@@ -9,3 +9,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+// To run json-server: npx json-server --watch database/data.json --port 8000

@@ -78,6 +78,7 @@ const Text = (props) => {
         })
     }
 
+
     return ( 
         <div className="texts-div">
             { editing && <div className='create-div' id='editing-create-div'>
